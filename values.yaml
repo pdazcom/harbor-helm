@@ -701,6 +701,8 @@ jobservice:
   existingSecret: ""
   # Key within the existing secret for the job service secret
   existingSecretKey: JOBSERVICE_SECRET
+  # Redis connection URL, if empty that generates by helm
+  redisURL: ""
 
 registry:
   registry:
