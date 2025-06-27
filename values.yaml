@@ -703,6 +703,7 @@ jobservice:
   existingSecretKey: JOBSERVICE_SECRET
   # Redis connection URL, if empty that generates by helm
   redisURL: ""
+  configAnnotations: []
 
 registry:
   registry:

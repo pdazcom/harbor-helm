@@ -5,6 +5,10 @@ metadata:
   namespace: {{ .Release.Namespace | quote }}
   labels:
 {{ include "harbor.labels" . | indent 4 }}
+{{- if .Values.jobservice.configAnnotations }}
+  annotations:
+{{ toYaml .Values.jobservice.configAnnotations | indent 4 }}
+{{- end }}
 data:
   config.yml: |+
     #Server listening port
