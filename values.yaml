@@ -884,6 +884,9 @@ trivy:
   securityCheck: "vuln"
   # The duration to wait for scan completion
   timeout: 5m0s
+  # redis credentials from secret.
+  # if a false, then you need to add extraEnvVars: SCANNER_REDIS_URL, SCANNER_JOB_QUEUE_REDIS_URL, SCANNER_STORE_REDIS_URL
+  redisCredentialsFromSecret: true
 
 database:
   # if external database is used, set "type" to "external"
