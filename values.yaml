@@ -765,6 +765,7 @@ registry:
   # If true, the registry returns relative URLs in Location headers. The client is responsible for resolving the correct URL.
   relativeurls: false
   credentials:
+    secretAnnotations: {}
     username: "harbor_registry_user"
     password: "harbor_registry_password"
     # If using existingSecret, the key must be REGISTRY_PASSWD and REGISTRY_HTPASSWD
