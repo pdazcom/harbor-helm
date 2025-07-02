@@ -7,7 +7,7 @@ metadata:
 {{ include "harbor.labels" . | indent 4 }}
 {{- if .Values.registry.configAnnotations }}
   annotations:
-    vaultInjectionChecksum: {{ template "harbor.redis.addr" . | sha256sum }}
+    vaultInjectionChecksum: {{ .Values.redis.external.addr | sha256sum }}
 {{ toYaml .Values.registry.configAnnotations | indent 4 }}
 {{- end }}
 data:
