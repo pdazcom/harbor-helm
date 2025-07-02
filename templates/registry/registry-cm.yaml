@@ -5,6 +5,11 @@ metadata:
   namespace: {{ .Release.Namespace | quote }}
   labels:
 {{ include "harbor.labels" . | indent 4 }}
+{{- if .Values.registry.configAnnotations }}
+  annotations:
+    vaultInjectionChecksum: {{ template "harbor.redis.password" . | sha256sum }}
+{{ toYaml .Values.registry.configAnnotations | indent 4 }}
+{{- end }}
 data:
   config.yml: |+
     version: 0.1

@@ -741,6 +741,7 @@ registry:
   #   whenUnsatisfiable: DoNotSchedule
   ## Additional deployment annotations
   podAnnotations: {}
+  configAnnotations: {}
   ## Additional deployment labels
   podLabels: {}
   ## The priority class to run the pod as
